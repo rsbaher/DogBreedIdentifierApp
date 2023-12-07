@@ -1,27 +1,25 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+import Head from 'next/head';
 import ImageCanvas from "../components/ImageCanvas";
-import FileUpload from "../components/FileUpload";
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import React from 'react';
 
 
-export default function Home() {  
+const SqueezeNet: NextPage = () => {  
   
   return (
     <Container maxWidth='lg'>
       <Head>
-        <title>Dog Breed Classifier</title>
-        <meta name="description" content="Predicts dog breed from an image" />
+        <title>SqueezeNet Example</title>
+        <meta name="description" content="SqueezeNet Example" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
       <Container sx={{ width: '100%', marginTop: '2em'}}>
-            <Typography variant='h1'>Dog Breed Classifier</Typography>
-            <Typography variant='body1' sx={{paddingTop: '1em'}}>Start by uploading an Image of a dog.</Typography>
-            <Typography variant='body2' color='secondary' sx={{}}>Please note, results would be more accurate if the image contains a maximum of one dog.</Typography>
-            <FileUpload></FileUpload>
+            <Typography variant='h1'>SqueezeNet Example</Typography>
         <Container maxWidth='md'>
           <Box sx={{ width: '90%', paddingTop: '5%', paddingBottom: '5%'}}>
             <ImageCanvas width={240} height={240}/>
@@ -30,7 +28,8 @@ export default function Home() {
         </Container>
       </Container>
       </main>
-
     </Container>
   )
 }
+
+export default SqueezeNet
